@@ -4,6 +4,8 @@ set of bash scripts that download list of IP address with a bad reputation, from
 - Tor Bulk Exit https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1
 - more repo coming soon...
 
+very useful for integrate into regular expression or blacklist
+
 ## anonymous_proxy.sh
 Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com/en/proxy-detection-sample-list 
 "most used IP addresses in the minFraud network that have been identified by the Proxy Detection service as higher risk."
