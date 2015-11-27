@@ -1,5 +1,7 @@
 # Reputation IP
-set of bash scripts that download list of IP address with a bad reputation, from public database/website like https://www.maxmind.com/en/proxy-detection-sample-list or https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1
+set of bash scripts that download list of IP address with a bad reputation, from public database/website like: 
+- Anonymous Proxy https://www.maxmind.com/en/proxy-detection-sample-list
+- Tor Bulk Exit https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1
 
 ## anonymous_proxy.sh
 Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com/en/proxy-detection-sample-list 
