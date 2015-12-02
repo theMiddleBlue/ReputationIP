@@ -18,7 +18,7 @@ project_honeypot.sh | Project Honey Pot Directory of Dictionary Attacker IPs
 ## Real Life usage example
 Drop all Dictionary Attacker IPs from Project Honey Pot Directory:
 ```sh
-# ./project_honeypot.sh -o list | egrep '[0-9\.]+' | awk '{ print "iptables -A INPUT -s " $1 " -j DROP" }'
+./project_honeypot.sh -o list | egrep '[0-9\.]+' | awk '{ print "iptables -A INPUT -s " $1 " -j DROP" }'
 ```
 ```sh
 iptables -A INPUT -s 85.16.128.242 -j DROP
