@@ -41,7 +41,9 @@ cat /usr/local/nginx/logs/access.log | egrep '(`./project_honeypot.sh -o csv -e 
 # etc ...
 ```
 
-## anonymous_proxy.sh
+## Syntax
+
+### anonymous_proxy.sh
 Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com/en/proxy-detection-sample-list 
 "most used IP addresses in the minFraud network that have been identified by the Proxy Detection service as higher risk."
 ```
@@ -57,7 +59,7 @@ Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com
   	default: csv
 +
 ```
-### Example anonymous_proxy.sh
+#### Example anonymous_proxy.sh
 ```sh
 # ./anonymous_proxy.sh -o list -e | more
 5\.9\.36\.66
@@ -77,7 +79,7 @@ Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com
 5.9.36.66|5.9.158.75|5.28.62.85|5.39.79.8|5.79.68.161|5.79.74.233|5.135.66.213|5.135.143.104....
 ```
 
-## TOR_bulk_exit.sh
+### TOR_bulk_exit.sh
 ```
 # ./TOR_bulk_exit.sh -h
 +
@@ -92,7 +94,7 @@ Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com
 +
 ```
 
-### Example TOR_bulk_exit.sh
+#### Example TOR_bulk_exit.sh
 same as anonymous_proxy.sh example
 
 ### Others scripts
