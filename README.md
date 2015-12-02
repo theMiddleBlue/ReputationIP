@@ -79,24 +79,6 @@ Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com
 5.9.36.66|5.9.158.75|5.28.62.85|5.39.79.8|5.79.68.161|5.79.74.233|5.135.66.213|5.135.143.104....
 ```
 
-### TOR_bulk_exit.sh
-```
-# ./TOR_bulk_exit.sh -h
-+
- Usage ./TOR_bulk_exit.sh [options]
-+
--h	this help
--s	Separator char between each IP
--e	Escape dot for use in regex (ex: 127\.0\.0\.1)
--o	Output format (list or csv).
-  	for 'csv' you can specify a separator with -s
-  	default: csv
-+
-```
-
-#### Example TOR_bulk_exit.sh
-same as anonymous_proxy.sh example
-
 ### Others scripts
 all scripts have the same syntax.
 
