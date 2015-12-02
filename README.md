@@ -15,6 +15,20 @@ anonymous_proxy.sh | MaxMind GeoIP Anonymous Proxies
 TOR_bulk_exit.sh | Tor Exit Nodes
 project_honeypot.sh | Project Honey Pot Directory of Dictionary Attacker IPs
 
+## Real Life usage example
+Drop all Dictionary Attacker IPs from Project Honey Pot Directory:
+```sh
+# ./project_honeypot.sh -o list | egrep '[0-9\.]+' | awk '{ print "iptables -A INPUT -s " $1 " -j DROP" }'
+```
+```sh
+iptables -A INPUT -s 85.16.128.242 -j DROP
+iptables -A INPUT -s 95.130.11.147 -j DROP
+iptables -A INPUT -s 162.248.9.218 -j DROP
+iptables -A INPUT -s 95.130.11.178 -j DROP
+iptables -A INPUT -s 159.253.1.177 -j DROP
+# etc ...
+```
+
 ## anonymous_proxy.sh
 Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com/en/proxy-detection-sample-list 
 "most used IP addresses in the minFraud network that have been identified by the Proxy Detection service as higher risk."
