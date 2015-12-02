@@ -1,11 +1,19 @@
 # Reputation IP
 set of bash scripts that download list of IP address with a bad reputation, from public database/website like: 
-- **anonymous_proxy.sh** MaxMind GeoIP Anonymous Proxies
-- **TOR_bulk_exit.sh** Tor Exit Nodes
-- **project_honeypot.sh** Project Honey Pot Directory of Dictionary Attacker IPs
+- MaxMind GeoIP Anonymous Proxies
+- Tor Exit Nodes
+- Project Honey Pot Directory of Dictionary Attacker IPs
 - more repo coming soon...
 
 very useful for integrate into regular expression or blacklist. It can escape dot (`\.`) and you can sepcify the field separator between each ip (`-s "|"`). The output can be a **list** (one ip per line) or **csv** (with a comma as default separator).
+
+## Scripts and descriptions
+
+Script | Description
+------ | ------------
+anonymous_proxy.sh | MaxMind GeoIP Anonymous Proxies
+TOR_bulk_exit.sh | Tor Exit Nodes
+project_honeypot.sh | Project Honey Pot Directory of Dictionary Attacker IPs
 
 ## anonymous_proxy.sh
 Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com/en/proxy-detection-sample-list 
