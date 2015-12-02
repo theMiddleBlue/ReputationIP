@@ -70,7 +70,7 @@ Download from maxmind.com a list of 250 Open Proxy. From https://www.maxmind.com
 same as anonymous_proxy.sh example
 
 ### Others scripts
-all scripts has the same syntax.
+all scripts have the same syntax.
 
 # Contact
 ```
