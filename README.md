@@ -16,7 +16,8 @@ TOR_bulk_exit.sh | Tor Exit Nodes
 project_honeypot.sh | Project Honey Pot Directory of Dictionary Attacker IPs
 
 ## Real Life usage example
-Drop all Dictionary Attacker IPs from Project Honey Pot Directory:
+
+#### Drop all Dictionary Attacker IPs from Project Honey Pot Directory:
 ```sh
 ./project_honeypot.sh -o list | egrep '[0-9\.]+' | awk '{ print "iptables -A INPUT -s " $1 " -j DROP" }'
 ```
@@ -26,6 +27,17 @@ iptables -A INPUT -s 95.130.11.147 -j DROP
 iptables -A INPUT -s 162.248.9.218 -j DROP
 iptables -A INPUT -s 95.130.11.178 -j DROP
 iptables -A INPUT -s 159.253.1.177 -j DROP
+# etc ...
+```
+
+#### Find Dictionary Attacker IPs in Nginx access logs
+```sh
+cat /usr/local/nginx/logs/access.log | egrep '(`./project_honeypot.sh -o csv -e -s "|"`)'
+```
+```sh
+85.16.128.242 - - [26/Nov/2015:12:59:14 +0100] "GET / HTTP/1.0" 200 2461 "-"
+95.130.11.147 - - [30/Nov/2015:18:32:09 +0100] "GET / HTTP/1.0" 200 2461 "-"
+159.253.1.177 - - [01/Dec/2015:01:14:41 +0100] "GET / HTTP/1.0" 200 2461 "-"
 # etc ...
 ```
 
