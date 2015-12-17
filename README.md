@@ -46,14 +46,14 @@ cat /usr/local/nginx/logs/access.log | egrep '(`./project_honeypot.sh -o csv -e 
 #### List all blocked IP Address from your WAF.Red account
 Get your WAF.Red black-list using WAF.Red API, more info at [https://waf.red](https://waf.red) 
 ```sh
-# ./waf_red.sh -o list -u demo@waf.red -p demo
+./waf_red.sh -o list -u demo@waf.red -p demo
 1.2.3.4
 1.2.3.5
 1.2.3.6
 ```
 CSV output regex
 ```sh
-# ./waf_red.sh -o csv -e -u demo@waf.red -p demo
+./waf_red.sh -o csv -e -u demo@waf.red -p demo
 1\.2\.3\.4,1\.2\.3\.5,1\.2\.3\.6
 ```
 
