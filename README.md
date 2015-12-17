@@ -101,5 +101,6 @@ all scripts have the same syntax.
 # Contact
 ```
 Andrea (aka theMiddle) Menin
-themiddle@waf.blue
+themiddle@waf.red
+https://waf.red
 ```
