@@ -3,6 +3,7 @@ set of bash scripts that download list of IP address with a bad reputation, from
 - MaxMind GeoIP Anonymous Proxies
 - Tor Exit Nodes
 - Project Honey Pot Directory of Dictionary Attacker IPs
+- WAF.Red API [https://waf.red](https://waf.red)
 - more repo coming soon...
 
 very useful for integrate into regular expression or blacklist. It can escape dot (`\.`) and you can sepcify the field separator between each ip (`-s "|"`). The output can be a **list** (one ip per line) or **csv** (with a comma as default separator).
@@ -14,6 +15,7 @@ Script | Description
 anonymous_proxy.sh | MaxMind GeoIP Anonymous Proxies
 TOR_bulk_exit.sh | Tor Exit Nodes
 project_honeypot.sh | Project Honey Pot Directory of Dictionary Attacker IPs
+waf_red.sh | WAF.Red API User Black-list
 
 ## Real Life usage example
 
@@ -39,6 +41,20 @@ cat /usr/local/nginx/logs/access.log | egrep '(`./project_honeypot.sh -o csv -e 
 95.130.11.147 - - [30/Nov/2015:18:32:09 +0100] "GET / HTTP/1.0" 200 2461 "-"
 159.253.1.177 - - [01/Dec/2015:01:14:41 +0100] "GET / HTTP/1.0" 200 2461 "-"
 # etc ...
+```
+
+#### List all blocked IP Address from your WAF.Red account
+Get your WAF.Red black-list using WAF.Red API, more info at [https://waf.red](https://waf.red) 
+```sh
+# ./waf_red.sh -o list -u demo@waf.red -p demo
+1.2.3.4
+1.2.3.5
+1.2.3.6
+```
+CSV output regex
+```sh
+# ./waf_red.sh -o csv -e -u demo@waf.red -p demo
+1\.2\.3\.4,1\.2\.3\.5,1\.2\.3\.6
 ```
 
 ## Syntax
